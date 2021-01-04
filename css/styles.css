@@ -1,0 +1,559 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+body {
+  color: #333333 !important;
+  font-family: "Roboto" !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Scrollbar */
+/* width */
+/* ::-webkit-scrollbar {
+  background-color: #ffffff;
+  width: 5px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #999999;
+  border-radius: 5px;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 5px;
+} */
+
+.newsSectionBody::-webkit-scrollbar {
+  background-color: #ffffff;
+  /* height: 5px; */
+  width: 5px !important;
+}
+
+.newsSectionBody::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px #999999; */
+  border-radius: 5px;
+}
+
+.newsSectionBody::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 5px;
+}
+
+/* Header */
+.navbar {
+  /* background-color: hsl(14, 100%, 63%); */
+  padding: 0 !important;
+  color: "#ffffff";
+  /*position: fixed !important;*/
+  top: 0;
+  width: 100%;
+  /*z-index: 999;*/
+  border-radius: 3px;
+}
+.navbar-brand {
+  padding-top: 0;
+}
+
+#navBar .navbar-nav li:not(:last-child) a {
+  width: 100%;
+  height: 100%;
+  padding-top: 25px;
+}
+
+.navbar-brand img {
+  height: 100%;
+}
+.site-name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.7em;
+}
+
+.search-icon {
+  font-size: 1.52em !important;
+}
+
+/* Menu */
+.menu-bar {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.menu-bar li {
+  border-right: 2px solid #000000;
+}
+
+.menu-bar li:last-child {
+  border: none;
+}
+
+.menu-bar li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-bar li a:hover {
+  color: #ffffff !important;
+  background-color: #333333;
+}
+/* Banner */
+#bannerIndicators img {
+  max-height: 400px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 7% !important;
+  font-size: 15px;
+  background-color: rgba(151, 9, 9, 0.5);
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-indicators li {
+  width: 13px !important;
+  height: 13px !important;
+  background-color: #999999 !important;
+  border-radius: 50%;
+}
+.carousel-indicators .active {
+  background-color: white !important;
+}
+
+.carousel-indicators > li:hover {
+  cursor: pointer;
+}
+
+/* Introduction */
+#introduction img {
+  width: 100%;
+  height: 100%;
+}
+
+#introduction .intro-right {
+  color: #ffffff;
+  background-color: #ff7043;
+  font-size: 1.2em;
+}
+
+/* Info */
+#info {
+  color: #ffffff;
+  background-color: #ff7043;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+.info-item-number {
+  font-size: 2.2em;
+}
+
+.info-item-detail {
+  color: #000000;
+}
+
+/* Body */
+.newsSection {
+  background-color: #ffedd4;
+}
+
+.newsSection .title {
+  color: #970909;
+}
+.newsSection .title a {
+  color: #970909;
+}
+.newsSection hr {
+  border-top: 1.5px solid #888888;
+}
+
+.newsSectionBody {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.newsSection .article {
+  display: inline-block;
+  margin: 0 8px;
+  white-space: normal;
+}
+
+.newsSection .article:first-child {
+  margin-left: 0px;
+}
+
+.newsSection ::-webkit-scrollbar {
+  height: 12px;
+}
+
+.newsSection h3 {
+  font-size: 1.2rem;
+}
+
+.article {
+  width: 250px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  cursor: pointer;
+}
+
+.article .article-image {
+  box-shadow: 0px 3px 3px #aaaaaa;
+}
+
+.article .article-date {
+  font-size: 0.8em;
+  color: #888888;
+  font-style: italic;
+}
+
+#latestNews .title img {
+  width: 40px;
+  height: 40px;
+  color: red;
+  vertical-align: bottom;
+}
+
+#studentNews .title i {
+  color: #0d0dc7;
+  font-size: 1.2em;
+}
+
+#teacherNews .title i,
+#postgraduateNews .title i,
+#conferenceNews .title i {
+  font-size: 1.2em;
+}
+
+#postgraduateNews .title i {
+  color: #333333;
+  font-size: 1.2em;
+}
+
+#conferenceNews .title i {
+  color: #107010;
+  font-size: 1.2em;
+}
+
+.more {
+  color: #970909;
+}
+
+.more a {
+  color: #970909 !important;
+  text-decoration: underline;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.more a:hover {
+  color: #e77000 !important;
+}
+
+#footer {
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+.footer-logo img {
+  width: 90%;
+}
+
+.footer-list li {
+  margin: 15px 1.5px;
+  font-size: 1.05em;
+}
+
+.footer-list li a {
+  color: #ffffff;
+}
+
+.footer-list li a:hover {
+  color: #7c410a;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.copyright h6 {
+  font-size: 1.1em !important;
+}
+
+.copyright-C {
+  font-size: 1.3em;
+}
+
+.fa-facebook-official {
+  color: #3b5998;
+  background-color: #ffffff;
+  border-radius: 100%;
+  font-size: 1.7em;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.fa-rss-square {
+  color: #7c410a;
+  font-size: 1.7em;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.fa-download {
+  color: #2d5cc0;
+  cursor: pointer;
+}
+
+/* Register Project Page */
+#registerProSection {
+}
+
+#registerProSection .registerPro-left-wrapper,
+#registerProSection .registerPro-right-wrapper {
+  border: 1.5px solid rgba(51, 51, 51, 1);
+  border-radius: 5px;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+#registerProSection .registerPro-title {
+  color: #7c410a;
+  text-align: center;
+}
+
+#registerProSection .registerPro-left .custom-file-label::after {
+  width: 100px;
+  left: 0;
+  right: auto;
+  border-left-width: 0;
+  border-right: inherit;
+  content: "Chọn tệp";
+}
+
+#registerProSection .registerPro-left-title hr {
+  border-top: 1.5px solid #888888;
+}
+
+#firstChoiceBtn,
+#secondChoiceBtn {
+  width: 100px;
+  background-color: #e9ecef;
+}
+
+#registerProSection .registerPro-right-title i {
+  color: #ff7e34;
+}
+
+#registerProSection .registerPro-right-body li {
+  padding: 20px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #000000;
+}
+
+#registerProSection .registerPro-right-body li a {
+  color: #333333;
+}
+
+#registerProSection .registerPro-right-more a {
+  color: #7c410a;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#registerProSection .registerPro-right-more a:hover {
+  color: #e77000 !important;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* Modal */
+.modal-dialog.modal-xl {
+  max-width: 60% !important;
+  width: 60%;
+}
+
+.modal-title {
+  color: #7c410a;
+  margin: 0 auto;
+}
+
+.modalOkBtn {
+  margin-left: auto;
+}
+
+#choiceModal .modal-body {
+  background-color: #dddddd;
+  border-radius: 3px;
+}
+
+#choiceModal .choiceWrapper .col-md-6 {
+  border: 1px solid #aaaaaa;
+}
+
+#choiceModal .custom-control-label::before {
+  background-color: #aaaaaa;
+}
+
+#choiceModal button.close {
+  position: absolute;
+  right: 3%;
+}
+
+/* Cancel Registered Project Page */
+#registerProSection .registerPro-left-body table tr th:first-child,
+#registerProSection .registerPro-left-body table tr th:last-child,
+#registerProSection .registerPro-left-body table tr td:first-child,
+#registerProSection .registerPro-left-body table tr td:last-child {
+  text-align: center;
+}
+
+/* Dropdown */
+.dropdown-menu .dropdown-title {
+  color: #7c410a;
+}
+
+/* Search Page */
+#searchResultSection {
+}
+
+#searchResultSection .registerPro-left-wrapper,
+#searchResultSection .registerPro-right-wrapper {
+  border: 1.5px solid #333333;
+  border-radius: 2px;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+#searchResultSection .registerPro-title {
+  color: #7c410a;
+  text-align: center;
+}
+
+#searchResultSection .registerPro-left-title hr {
+  border-top: 1.5px solid #888888;
+}
+
+#searchResultSection .registerPro-right-title i {
+  color: #ff7e34;
+}
+
+#searchResultSection .registerPro-right-body li {
+  padding: 20px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #000000;
+}
+
+#searchResultSection .registerPro-right-body li a {
+  color: #333333;
+}
+
+#searchResultSection .registerPro-right-more a {
+  color: #7c410a;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#searchResultSection .registerPro-right-more a:hover {
+  color: #e77000 !important;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#searchResultSection .searchResult span {
+  color: #7c410a;
+  font-weight: 600;
+}
+
+#searchResultSection .article-title a {
+  font-weight: 600;
+  color: #333333;
+}
+
+#searchResultSection .article-date {
+  margin: 20px auto;
+  text-align: center;
+  font-weight: 600;
+}
+
+#searchResultSection .article-content a {
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Detail Notification Page*/
+.detail-notification .detail-notification-date {
+  color: #333333;
+  font-weight: 500;
+}
+
+.detail-notification-divider {
+  border-top: 1.5px solid #888888;
+}
+
+.detail-notification-related-news li {
+  padding: 5px 0;
+}
+
+.detail-notification-related-news li a {
+  color: #333333;
+  font-weight: bold;
+}
+
+/* <baobao> */
+/* ^. */
+.sub-title {
+  font-size: 0.95rem;
+}
+
+.sub-title:hover {
+  color: #ff7043 !important;
+  transition: all 0.1s;
+}
+
+.menu-item {
+  /*display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;*/
+  height: 100%;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.1s;
+}
+
+.menu-bar-custom {
+  height: 68px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.sub-menu a {
+  font-size: 0.8rem !important;
+}
+
+.map-frame{
+  box-shadow: 5px 10px 18px #1223;
+  width: 80%;
+  height: 250px;
+  border: 0px;
+}
+/* </baobao> */

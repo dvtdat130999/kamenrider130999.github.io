@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>FIT HCMUS</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon-hcmus.png"/>
+  </head>
+  <body>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light menu-bar py-0 container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto sub-menu">
+          <li class="nav-item active sub-menu">
+            <a class="nav-link px-4" href="#" role="button" id="introDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GIỚI THIỆU <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <div class="dropdown px-1">
+              <div class="dropdown-menu px-0 py-4" aria-labelledby="introDropdownMenu">
+                <h4 class="dropdown-title text-center">GIỚI THIỆU</h4>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Về chúng tôi</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Tầm nhìn - Sứ mệnh</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Tổ chức/Khoa</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Cơ sở vật chất</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Nghiên cứu</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đào tạo</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Tuyển sinh</a>
+                <div class="dropdown-divider w-100"></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item active sub-menu">
+            <a class="nav-link px-4" href="#" role="button" id="studentDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SINH VIÊN <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <div class="dropdown px-1">
+              <div class="dropdown-menu px-0 py-4" aria-labelledby="studentDropdownMenu">
+                <h4 class="dropdown-title text-center">SINH VIÊN</h4>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Cuộc sống sinh viên</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Diễn đàn sinh viên</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Diễn đàn thảo luận</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="registerproject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <div class="dropdown-divider w-100"></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item active sub-menu">
+            <a class="nav-link px-4" href="#" role="button" id="teacherDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GIẢNG VIÊN <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <div class="dropdown px-1">
+              <div class="dropdown-menu px-0 py-4" aria-labelledby="teacherDropdownMenu">
+                <h4 class="dropdown-title text-center">GIẢNG VIÊN</h4>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Công tác giảng dạy</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Thành tích thi đua</a>
+                <div class="dropdown-divider w-100"></div>
+                <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Nghiên cứu</a>
+                <div class="dropdown-divider w-100"></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item active sub-menu">
+            <a class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /Menu -->
+    <!-- Header -->
+    <div id="navBar" style="background-color: #ff7043;">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="images/fit.PNG" width="50" alt="">
+          <div class="site-name px-3">
+            <span>KHOA CÔNG NGHỆ THÔNG TIN</span> <br/>
+            <span>ĐH KHOA HỌC TỰ NHIÊN TP.HCM</span>
+          </div>
+        </a>
+      
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto menu-bar-custom">
+            <li class="nav-item active px-1 menu-item">
+              <a class="nav-link sub-title sub-title" href="#" role="button" id="infoDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THÔNG TIN <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <div class="dropdown px-1">
+                <div class="dropdown-menu px-0 py-4" aria-labelledby="infoDropdownMenu">
+                  <h4 class="dropdown-title text-center">THÔNG TIN CHUNG</h4>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Tin tức</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Sự kiện</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Thời sự CNTT</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Tin tuyển dụng</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Quy trình thực hiện tốt nghiệp</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Thành tích sinh viên</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Hội thảo - Hội nghị</a>
+                  <div class="dropdown-divider w-100"></div>
+                </div>
+            </li>
+            <li class="nav-item active px-1 menu-item">
+              <a class="nav-link sub-title" href="#" role="button" id="majorDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CHUYÊN NGÀNH <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <div class="dropdown px-1">
+                <div class="dropdown-menu px-0 py-4" aria-labelledby="majorDropdownMenu">
+                  <h4 class="dropdown-title text-center">CHUYÊN NGÀNH</h4>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Công nghệ thông tin</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Kỹ thuật phần mềm</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Hệ thống thông tin</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Khoa học máy tính</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Thị giác máy tính</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Mạng máy tính</a>
+                  <div class="dropdown-divider w-100"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item active px-1 menu-item">
+              <a class="nav-link sub-title" href="#" role="button" id="researchDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ĐÀO TẠO <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <div class="dropdown px-1">
+                <div class="dropdown-menu px-3 py-4" aria-labelledby="researchDropdownMenu">
+                  <h4 class="dropdown-title text-center">ĐÀO TẠO - NGHIÊN CỨU</h4>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Chính quy</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Cao đẳng</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Chất lượng cao</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Chương trình Việt - Pháp</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Hoàn chỉnh Đại học</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đào tạo từ xa</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Sau Đại học</a>
+                  <div class="dropdown-divider w-100"></div>
+                </div>
+            </li>
+            <li class="nav-item active px-1 menu-item">
+              <a class="nav-link sub-title" href="#" role="button" id="researchDropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGHIÊN CỨU <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <div class="dropdown px-1">
+                <div class="dropdown-menu px-3 py-4" aria-labelledby="researchDropdownMenu">
+                  <h4 class="dropdown-title text-center">ĐÀO TẠO - NGHIÊN CỨU</h4>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Chính quy</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Cao đẳng</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Chất lượng cao</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Chương trình Việt - Pháp</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Hoàn chỉnh Đại học</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đào tạo từ xa</a>
+                  <div class="dropdown-divider w-100"></div>
+                  <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Sau Đại học</a>
+                  <div class="dropdown-divider w-100"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item active px-4">
+              <form class="form-inline" id="searchForm" action="searchPage/index.html">
+                <input id="key-search" class="form-control" type="search" placeholder="Tìm kiếm"  aria-label="Search">
+                <a id="searchSubmitBtn" class="nav-link" href="#"><i class="fas fa-search search-icon text-white"></i></a>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- /Header -->
+    <!-- Banner -->
+    <div id="bannerIndicators" class="carousel slide my-4 container" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#bannerIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#bannerIndicators" data-slide-to="1" ></li>
+        <li data-target="#bannerIndicators" data-slide-to="2" ></li>
+        <li data-target="#bannerIndicators" data-slide-to="3" ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="images/banner1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/banner2.png" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/banner1.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/banner2.png" alt="Second slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#bannerIndicators" role="button" data-slide="prev" style="display: none;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#bannerIndicators" role="button" data-slide="next" style="display: none;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- /Banner-->
+    <!-- Introduction -->
+    <div class="container" style="padding: 0;">
+      <div id="introduction" class="row mx-0">
+        <div class="col-md-6 intro-left px-0">
+          <img class="d-block w-100" src="images/image1.jpg" alt="Fit Image">
+        </div>
+        <div class="col-md-6 intro-right p-5 px-0">
+          Khoa Công nghệ Thông tin (CNTT) - Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM được thành lập theo quyết định số 3818/GD-ĐT ngày 13/12/1994 của Bộ Trưởng Bộ GD&ĐT, dựa trên Bộ môn Tin học (thuộc Khoa Toán, Trường Đại học Tổng hợp TP.HCM). Trải qua hơn 25 năm hoạt động, Khoa đã phát triển vững chắc và được Chính phủ bảo trợ để trở thành một trong những khoa CNTT đầu ngành trong hệ thống giáo dục đại học của Việt Nam.
+        </div>
+      </div>
+    </div>
+    <!-- /Introduction-->
+    <!-- Info -->
+    <div class="container" style="padding: 0;">
+      <div id="info" class="row px-5 text-center my-4 mx-0 ">
+        <h3 class="text-center col-md-12 py-3">TỰ HÀO LÀ SINH VIÊN KHOA CNTT TRƯỜNG ĐHKHTN TP.HCM</h3>
+        <div class="col-md-3 info-item p-4 ">
+          <h3 class="py-4">TOP <span class="info-item-number">5</span></h3>
+          <h6 class="info-item-detail px-4">ĐÀO TẠO NHÂN LỰC IT TỐT NHẤT VIỆT NAM</h6>
+        </div>
+        <div class="col-md-3 info-item p-4 ">
+          <h3 class="py-4">HƠN <span class="info-item-number">3000</span></h3>
+          <h6 class="info-item-detail px-4">CỬ NHÂN CNTT RA TRƯỜNG MỖI NĂM</h6>
+        </div>
+        <div class="col-md-3 info-item p-4 ">
+          <h3 class="py-4"><span class="info-item-number">95%</span></h3>
+          <h6 class="info-item-detail px-4">SINH VIÊN CÓ VIỆC LÀM SAU KHI RA TRƯỜNG</h6>
+        </div>
+        <div class="col-md-3 info-item p-4 ">
+          <h3 class="py-4"><span class="info-item-number">20</span> <span style="font-size:20px;">TRIỆU/THÁNG</span></h3>
+          <h6 class="info-item-detail px-4">MỨC LƯƠNG TRUNG BÌNH 2 NĂM SAU KHI RA TRƯỜNG</h6>
+        </div>
+      </div>
+    </div>
+    <!-- /Info -->
+
+    <!-- Body -->
+    <!-- Latest News-->
+    <div id="latestNews" class="container newsSection my-5" >
+      <div class=" py-3">
+        <h3 class="title py-0">
+          <img src="images/new-icon.svg"/>
+          TIN MỚI
+        </h3>
+        <hr/>
+        <div class="newsSectionBody py-3">
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article1.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article2.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article3.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article4.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article1.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article2.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article3.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2">
+            <div class="article-image">
+              <img src="images/article4.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+        </div>
+      </div>
+    </div>
+    <!-- Latest News-->
+    <!-- Student News-->
+    <div id="studentNews" class="container newsSection my-5" >
+      <div class="py-3">
+        <h3 class="title py-0">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          THÔNG BÁO SINH VIÊN
+        </h3>
+        <hr/>
+        <div class="newsSectionBody py-3">
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article1.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article2.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article3.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article4.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article1.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article2.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article3.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiStudentPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article4.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+        </div>
+      </div>
+    </div>
+    <!-- Student News-->
+    <!-- Teacher News-->
+    <div id="teacherNews" class="container newsSection mt-5 mb-4">
+      <div class=" py-3">
+        <h3 class="title py-0">
+          <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+          THÔNG BÁO CHO VC-GV
+        </h3>
+        <hr/>
+        <div class="newsSectionBody py-3">
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article1.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article2.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article3.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article4.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article1.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article2.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article3.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+          <!-- Article -->
+          <div class="article p-2" onclick="window.open('detailNotiTeacherPage/index.html','_self');">
+            <div class="article-image">
+              <img src="images/article4.png"/>
+            </div>
+            <div class="article-date text-center my-2">
+              <span>Wed, 26/10/2020</span>
+            </div>
+            <div class="article-title px-2 py-2 text-center text-underline">
+              <h6><u>Thông báo nghỉ học môn ABCD</u></h6>
+            </div>
+            <div class="article-content px-2 py-2 text-center">
+              Ngày abcd, sv nghỉ học môn ... theo lịch của ...
+            </div>
+          </div>
+          <!-- /Article -->
+        </div>
+      </div>
+    </div>
+    <!-- Teacher News-->
+    <div id="" class="mt-0 mb-3 text-center more container">
+      <a href="categoryPage/index.html"><h6><i><u>Xem tất cả các tin</u></i></h6></a>
+    </div>
+    <!-- /Body -->
+
+    <!-- Footer -->
+    <div style="background-color: #ff7043;">
+      <div class="container-fluid" style="padding: 0; ">
+        <footer id="footer" class="mt-5 pd-3">
+          <div class="container-fluid">
+            <div class="row py-3">
+              <div class="footer-logo col-md-4">
+                <a href="./index.html"><img src="../images/fit-logo.svg" width="50" alt=""></a>
+              </div>
+              <div class="col-md-2">
+                <ul class="footer-list">
+                  <li><a href="#">Liên hệ</a></li>
+                  <li><a href="#">Chính sách</a></li>
+                  <li><a href="#">Terms of use</a></li>
+                  <li><a href="#">Góp ý</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <ul class="footer-list">
+                  <li><a href="#">Trang môn học</a></li>
+                  <li><a href="#">Web trường</a></li>
+                  <li><a href="#">Facebook</a> &nbsp;<i class="fa fa-facebook-official" aria-hidden="true" ></i></li>
+                  <li><a href="#">RSS Feed</a> &nbsp;<i class="fa fa-rss-square" style="color: white;" aria-hidden="true"></i></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <iframe class="map-frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6374728512437!2d106.68055795086221!3d10.76239779229344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1953a6e961%3A0xc77e334f1510b975!2zxJDhuqFpIGjhu41jIEtob2EgaOG7jWMgVOG7sSBuaGnDqm4!5e0!3m2!1sen!2s!4v1577255933141!5m2!1sen!2s"
+                    frameborder="0" allowfullscreen style="border-radius: 5px; height: 240px; margin-top: 12px;"></iframe>
+
+              </div>
+            </div>
+            <div class="row copyright text-center">
+              <div class="col-md-12">
+                <h6><span class="copyright-C">©</span>opyright 2020</h6>
+                <h6>Thiết kế bởi Khoa CNTT - ĐHKHTN ĐHQG TPHCM</h6>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- /Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="javascript/main.js"></script>
+    <script src="javascript/search.js"></script>
+    <script>
+      window.open("./homepage/index.html", "_self")
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fontawesome-->
+    <script src="https://kit.fontawesome.com/4e30919dc1.js" crossorigin="anonymous"></script>
+  </body>
+</html>
