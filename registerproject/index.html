@@ -59,7 +59,7 @@
                 <div class="dropdown-divider w-100"></div>
                 <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
                 <div class="dropdown-divider w-100"></div>
-                <a class="dropdown-item pl-0 pr-5" href="../registerproject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <a class="dropdown-item pl-0 pr-5" onclick="return onClickDKDT();"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
                 <div class="dropdown-divider w-100"></div>
               </div>
             </div>
@@ -79,8 +79,24 @@
               </div>
             </div>
           </li>
-          <li class="nav-item active sub-menu">
-            <a class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          <li id="logInCompo" class="nav-item active sub-menu">
+            <a id="logInBtn" class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          </li>
+          <li id="settingCompo" class="nav-item active sub-menu">
+            <a class="nav-link" href="#" role="button" id="settingDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span id="signedInUser">1712289</span>&nbsp;
+              <span class="signedInIcons">
+                <i class="fas fa-user"></i>&nbsp;
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </span>
+            </a>
+            <div class="dropdown px-1">
+              <div class="dropdown-menu px-0" aria-labelledby="settingDropdownMenu">
+                <a class="dropdown-item pl-0 pr-3" href="#"><i class="far fa-address-card px-3"></i> Hồ sơ</a>
+                <div class="dropdown-divider w-100"></div>
+                <a id="logOutBtn" class="dropdown-item pl-0 pr-3" href="#"><i class="fas fa-sign-out-alt px-3"></i> Đăng xuất</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -208,56 +224,65 @@
               <hr/>
             </div>
             <div class="registerPro-left-body">
-              <form class="pl-0 pr-5 py-3">
-                <div class="form-group row">
-                  <label for="name" class="col-sm-3 col-form-label text-right">Họ tên </label>
+              <form id="registerProForm" class="pl-0 pr-5 py-3">
+                <div class="form-group row" id="row-name-mssv">
+                  <label for="name" class="col-sm-3 col-form-label text-right">Họ tên <span class="asterisk">*</span></label>
                   <div class="col-sm-5">
                     <input type="text" name="fullName" class="form-control" id="name" placeholder="">
                   </div>
-                  <label for="mssv" class="col-sm-1 col-form-label text-right">MSSV </label>
+                  <label for="mssv" class="col-sm-1 col-form-label text-right">MSSV<span class="asterisk">*</span></label>
                   <div class="col-sm-3">
                     <input type="text" name="mssv" class="form-control" id="mssv" placeholder="">
                   </div>
                 </div>
-                <div class="form-group row">
-                  <label for="cv" class="col-sm-3 col-form-label text-right">CV </label>
+                <div id="errorNameMssv" style='display: flex;flex-direction: row;
+                                                justify-content: space-between;
+                                                '>
+                  <span id="errorName" style='color:red;margin-left:175px;'></span>
+                  <span id="errorMssv" style='color:red;'></span>
+
+                </div>
+                <div class="form-group row" id="row-cv">
+                  <label for="cv" class="col-sm-3 col-form-label text-right">CV <span class="asterisk">*</span></label>
                   <div class="col-sm-9">
                     <div class="custom-file">
                       <input type="file" name="cv" class="custom-file-input" id="cvFile" aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label text-center" for="cvFile"></label>
+                      <label class="custom-file-label text-center" for="cvFile" id="cvFileLabel"></label>
                     </div>
                   </div>
                 </div>
-                <div class="form-group row">
-                  <label for="scoreSheet" class="col-sm-3 col-form-label text-right">Bảng điểm </label>
+
+                <div class="form-group row" id="row-score">
+                  <label for="scoreSheet" class="col-sm-3 col-form-label text-right">Bảng điểm <span class="asterisk">*</span></label>
                   <div class="col-sm-9">
                     <div class="custom-file">
                       <input type="file" name="scoreSheet" class="custom-file-input" id="scoreSheetFile" aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label text-center" for="scoreSheetFile"></label>
+                      <label class="custom-file-label text-center" for="scoreSheetFile" id="scoreSheetFileLabel"></label>
                     </div>
                   </div>
                 </div>
-                <div class="form-group row">
-                  <label for="firstChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 1 </label>
+                <div class="form-group row" id="row-firstchoice">
+                  <label for="firstChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 1 <span class="asterisk">*</span></label>
                   <div class="col-sm-9 input-group">
                     <div class="input-group-prepend">
                       <button class="btn btn-light" type="button" id="firstChoiceBtn" data-toggle="modal" data-target="#choiceModal" onclick="onSelectingNV(0)">Chọn</button>
                     </div>
-                    <input type="text" name="firstChoice" class="form-control" id="firstChoice" placeholder="">
+                    <input type="text" name="firstChoice" class="form-control" disabled id="firstChoice" placeholder="">
                   </div>
                 </div>
-                <div class="form-group row">
-                  <label for="secondChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 2 </label>
+                <div class="form-group row" id="row-secondchoice">
+                  <label for="secondChoice" class="col-sm-3 col-form-label text-right">Nguyện vọng 2 <span class="asterisk">*</span></label>
                   <div class="col-sm-9 input-group">
                     <div class="input-group-prepend">
                       <button class="btn btn-light" type="button" id="secondChoiceBtn" data-toggle="modal" data-target="#choiceModal" onclick="onSelectingNV(1)">Chọn</button>
                     </div>
-                    <input type="text" name="secondChoice" class="form-control" id="secondChoice" placeholder="">
+                    <input type="text" name="secondChoice" class="form-control" disabled id="secondChoice" placeholder="">
                   </div>
                 </div>
+                <p id="errorRegisterForm" style="color:red;margin-left: 175px;align-text: center"></p>
               </form>
               <div class="text-center my-4">
-                <button id="registerProBtn" type="submit" class="btn btn-primary btn-lg px-5" data-toggle="modal" data-target="#errorModal" onclick="onRegister()">Đăng ký</button>
+                <button id="registerProBtn" type="submit" class="btn btn-primary btn-lg px-5" data-toggle="modal"  onclick="onRegister()">Đăng ký</button>
               </div>
             </div>
           </div>
@@ -277,7 +302,7 @@
             </div>
             <div class="registerPro-right-footer">
               <div class="registerPro-right-more text-center">
-                <h5><a href="#">Xem thêm</a></h5>
+                <h6><a href="../categoryPage/index.html">Xem thêm</a></h6>
               </div>
               <div class="fb-page mt-4 mb-3" data-href="https://www.facebook.com/fit.hcmus.hoatdong" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                 <blockquote cite="https://www.facebook.com/fit.hcmus.hoatdong" class="fb-xfbml-parse-ignore">
@@ -389,8 +414,14 @@
           <div class="container-fluid">
             <div class="row py-3">
               <div class="footer-logo col-md-4">
-                <a href="./index.html"><img src="../images/fit-logo.svg" width="50" alt=""></a>
+                <a href="./index.html">
+                  <img src="../images/fit.PNG" width="50" alt="">
+                  <div class="footer-homepage-link px-3">
+                    <span>KHOA CÔNG NGHỆ THÔNG TIN</span> <br/>
+                    <span>ĐH KHOA HỌC TỰ NHIÊN TP.HCM</span>
+                  </div>
               </div>
+
               <div class="col-md-2">
                 <ul class="footer-list">
                   <li><a href="#">Liên hệ</a></li>
@@ -416,7 +447,7 @@
             </div>
             <div class="row copyright text-center">
               <div class="col-md-12">
-                <h6><span class="copyright-C">©</span>opyright 2020</h6>
+                <h6><span class="copyright-C">©</span>copyright 2020</h6>
                 <h6>Thiết kế bởi Khoa CNTT - ĐHKHTN ĐHQG TPHCM</h6>
               </div>
             </div>
@@ -425,7 +456,229 @@
       </div>
     </div>
     <!-- /Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+	const onCVfileSelect = function(){
+          var x=document.getElementById("cvFile").value;
+          console.log(x);
+          if(x=="")
+          {
+            
+            var check=document.getElementById("errorCvFile");
+            if(check==null)
+            {
+              var para = document.createElement("p");
+              para.id='errorCvFile';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
+
+              var node = document.createTextNode("CV không thể rỗng");
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+              var child=document.getElementById('row-score');
+              element.insertBefore(para,child);   
+			  document.getElementById("row-cv").style.marginBottom = '0px';
+            }
+          }
+          else
+          {
+            var check=document.getElementById("errorCvFile");
+            if(check!=null)
+            {
+              check.remove();
+			  document.getElementById("row-cv").style.marginBottom = '1.5rem';
+            }
+
+          }
+        };
+		const onScoreSelect = function(){
+          var x=document.getElementById("scoreSheetFile").value;
+          if(x==""||x==null)
+          {
+            var check=document.getElementById("errorScoreSheetFile");
+            if(check===null)
+            {
+              var para = document.createElement("p");
+              para.id='errorScoreSheetFile';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
+
+              var node = document.createTextNode("Bảng điểm không thể rỗng");
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+              var child=document.getElementById('row-firstchoice');
+              element.insertBefore(para,child); 
+			  document.getElementById("row-score").style.marginBottom = '0px';
+			  
+            }
+          }
+          else
+          {
+            var check=document.getElementById("errorScoreSheetFile");
+            if(check!=null)
+            {
+              check.remove();
+			  document.getElementById("row-score").style.marginBottom = '1.5rem';
+            }
+
+          }
+        }
+		const onNameChange = function(){
+          var x=document.getElementById("name").value;
+          if(x==""||x==null)
+          {
+            
+            document.getElementById("errorName").innerHTML="Vui lòng nhập Họ Tên";
+			document.getElementById("row-name-mssv").style.marginBottom = '0px';
+          }
+          else
+          {
+            document.getElementById("errorName").innerHTML="";
+			document.getElementById("row-name-mssv").style.marginBottom = '1.5rem';
+			let errorMSSV = document.getElementById("errorMssv");
+			if (errorMSSV == null || errorMSSV.innerHTML == "") {
+				document.getElementById("row-name-mssv").style.marginBottom = '1.5rem';
+			}
+          }
+        };
+		const onMSSVChange = function(){
+          var x=document.getElementById("mssv").value;
+          if(x==""||x==null)
+          {
+            document.getElementById("errorMssv").innerHTML="Vui lòng nhập MSSV";
+			document.getElementById("row-name-mssv").style.marginBottom = '0px';
+          }
+          else
+          {
+            document.getElementById("errorMssv").innerHTML="";
+			let errorName = document.getElementById("errorName");
+			if (errorName == null || errorName.innerHTML == "") {
+				document.getElementById("row-name-mssv").style.marginBottom = '1.5rem';
+			}
+			
+          }
+        };
+		const onFirstChange = function(){
+          var x=document.getElementById("firstChoice").value;
+		  var secValue =document.getElementById("secondChoice").value;
+          if(x==""||x==null || (secValue == x && secValue != null && secValue != ""))
+          {
+            var check=document.getElementById("errorFirstChoice");
+            if(check===null)
+            {
+              var para = document.createElement("p");
+              para.id='errorFirstChoice';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
+
+              let nodeValue = "Nguyện vọng 1 không thể rỗng";
+			  if (secValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 1 không thể giống nguyện vọng 2";
+			  }
+			  var node = document.createTextNode(nodeValue);
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+              var child=document.getElementById('row-secondchoice');
+              element.insertBefore(para,child); 
+			  document.getElementById("row-firstchoice").style.marginBottom = '0px';
+            }
+			else {
+			  let nodeValue = "Nguyện vọng 1 không thể rỗng";
+			  if (secValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 1 không thể giống nguyện vọng 2";
+			  }
+			  check.innerText = nodeValue;
+			}
+          }
+          else
+          {
+            var check=document.getElementById("errorFirstChoice");
+            if(check!=null)
+            {
+              check.remove();
+			  document.getElementById("row-firstchoice").style.marginBottom = '1.5rem';
+            }
+          }
+        };
+		const onSecChange = function(){
+          var x=document.getElementById("secondChoice").value;
+		  var firstValue=document.getElementById("firstChoice").value;
+          if(x==""||x==null || (firstValue == x && firstValue != null && firstValue != ""))
+          {
+            var check=document.getElementById("errorSecondChoice");
+            if(check===null)
+            {
+              var para = document.createElement("p");
+              para.id='errorSecondChoice';
+              para.style.cssText='color:red;margin-left:175px;margin-top:0px;margin-bottom:0px;';
+
+              let nodeValue = "Nguyện vọng 2 không thể rỗng";
+			  if (firstValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 2 không thể giống nguyện vọng 1";
+			  }
+			  var node = document.createTextNode(nodeValue);
+              para.appendChild(node);
+              var element = document.getElementById("registerProForm");
+			  var errorRegister = document.getElementById("errorRegisterForm");
+			  if (errorRegister == null)
+				element.appendChild(para); 
+			  else 
+			    element.insertBefore(para,errorRegister); 
+			  document.getElementById("row-secondchoice").style.marginBottom = '0px';
+            }
+			else {
+			  let nodeValue = "Nguyện vọng 2 không thể rỗng";
+			  if (firstValue == x && x != null && x != "") {
+				nodeValue = "Nguyện vọng 2 không thể giống nguyện vọng 1";
+			  }
+			  check.innerText = nodeValue;
+			}
+          }
+          else
+          {
+            var check=document.getElementById("errorSecondChoice");
+            if(check!=null)
+            {
+              check.remove();
+			  document.getElementById("row-secondchoice").style.marginBottom = '1.5rem';
+            }
+          }
+        }
+		const onCheckValue = function() {
+		onNameChange();
+		onMSSVChange();
+		onCVfileSelect();
+		onScoreSelect();
+		onFirstChange();
+		onSecChange();
+		}
+      $(document).ready(function(){
+        $('#registerProForm').focusout(function(){
+          var x=document.getElementById("errorRegisterForm").value;
+          if(x!=""||x!=null)
+          {
+            
+            document.getElementById("errorRegisterForm").innerHTML=""
+          }
+          
+        });
+        $('#name').focusout(onNameChange);
+		$('#name').change(onNameChange);
+        $('#mssv').focusout(onMSSVChange);
+		$('#mssv').change(onMSSVChange);
+        $('#cvFile').focusout(onCVfileSelect);
+		$('#cvFile').change(onCVfileSelect);
+        $('#scoreSheetFile').focusout(onScoreSelect);
+		$('#scoreSheetFile').change(onScoreSelect);
+        $('#firstChoiceBtn').focusout(onFirstChange);
+		$('#firstChoiceBtn').change(onFirstChange);
+		$('#secondChoiceBtn').focusout(onSecChange);
+        $('#secondChoiceBtn').change(onSecChange);
+      });
+    </script>
     <script src="../javascript/projectGlobalVariable.js"></script>
+	<style> 
+		.row {
+			margin-bottom: 1.5rem;
+		}
+	</style>
     <script type="text/javascript">
       let selectedNV = "";
       let selectingNV = 0;
@@ -442,13 +695,16 @@
         console.log(selectedNV);
         if (selectingNV == 1) {
           document.getElementById("secondChoice").value = selectedNV;
+		  onSecChange();
         }
         else if (selectingNV == 0) {
           document.getElementById("firstChoice").value = selectedNV;
+		  onFirstChange();
         }
         $('#choiceModal').modal('hide');
       }
       const onRegister = () => {
+		onCheckValue();
         let name = document.getElementById("name").value;
         let mssv = document.getElementById("mssv").value;
         let cvFile = document.getElementById("cvFile").value;
@@ -462,13 +718,26 @@
           window.location.href = '../cancelRegisterProject/index.html';
         }
         else {
-          $('#errorModal').modal('show');
+          //document.getElementById("errorRegisterForm").innerHTML="Vui lòng nhập đầy đủ thông tin";
         }
       }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../javascript/search.js"></script>
-    
+    <script>
+		const onClickDKDT = function(){
+			const nv1 = localStorage.getItem("nguyenvong1");
+			const nv2 = localStorage.getItem("nguyenvong2");
+			const user = localStorage.getItem("user");
+			if (user != 1) { 
+				return;
+			}
+			if (nv1 == null || nv1 == "" || nv2 == null || nv2 == "")
+				window.location.href = "../registerproject/index.html";
+			else
+				window.location.href = "../cancelRegisterProject/index.html";
+		}
+	</script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -492,5 +761,6 @@
     
     <!-- Optional JavaScript -->
     <script src="../javascript/registerproject.js"></script>
+    <script src="../javascript/authentication.js"></script>
   </body>
 </html>

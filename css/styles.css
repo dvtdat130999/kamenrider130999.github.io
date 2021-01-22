@@ -32,19 +32,29 @@ img {
 } */
 
 .newsSectionBody::-webkit-scrollbar {
-  background-color: #ffffff;
-  /* height: 5px; */
-  width: 5px !important;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 9.2px !important;
+
+  /* width: 3px !important; */
+}
+
+.newsSectionBody::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+
+  /* height: 9px !important; */
+  /* width: 3px !important; */
 }
 
 .newsSectionBody::-webkit-scrollbar-track {
   /* box-shadow: inset 0 0 5px #999999; */
   border-radius: 5px;
+  height: 3px;
 }
 
 .newsSectionBody::-webkit-scrollbar-thumb {
-  background: #aaaaaa;
+  background: rgba(0, 0, 0, 0.22);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Header */
@@ -62,7 +72,7 @@ img {
   padding-top: 0;
 }
 
-#navBar .navbar-nav li:not(:last-child) a {
+#navBar .navbar-nav li.nav-item:not(:last-child) a.nav-link {
   width: 100%;
   height: 100%;
   padding-top: 25px;
@@ -95,6 +105,10 @@ img {
   border: none;
 }
 
+.menu-bar li:nth-last-child(2) {
+  border: none;
+}
+
 .menu-bar li a {
   display: block;
   width: 100%;
@@ -104,6 +118,11 @@ img {
 .menu-bar li a:hover {
   color: #ffffff !important;
   background-color: #333333;
+}
+
+#settingCompo .fa-address-card,
+#settingCompo .fa-sign-out-alt  {
+  font-size: 16px;
 }
 /* Banner */
 #bannerIndicators img {
@@ -138,6 +157,12 @@ img {
 }
 
 /* Introduction */
+#introduction .intro-left {
+  background: url("../images/image1_refined.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 #introduction img {
   width: 100%;
   height: 100%;
@@ -163,6 +188,9 @@ img {
 
 .info-item-detail {
   color: #000000;
+ 
+  font-size: 1rem;
+  font-family: "Roboto";
 }
 
 /* Body */
@@ -221,11 +249,9 @@ img {
   font-style: italic;
 }
 
-#latestNews .title img {
-  width: 40px;
-  height: 40px;
+#latestNews .title i {
   color: red;
-  vertical-align: bottom;
+  font-size: 1.2em;
 }
 
 #studentNews .title i {
@@ -269,8 +295,14 @@ img {
   border-radius: 3px;
 }
 
+.footer-homepage-link{
+    color: white;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
 .footer-logo img {
-  width: 90%;
+  width: 40%;
 }
 
 .footer-list li {
@@ -341,6 +373,17 @@ img {
   border-left-width: 0;
   border-right: inherit;
   content: "Chọn tệp";
+  z-index: 100000;
+  cursor: pointer;
+}
+
+.fileLabelHover::after {
+  cursor: pointer;
+  background-color: #dddddd !important;
+}
+
+#registerProSection .form-control:disabled {
+  background-color: #ffffff;
 }
 
 #registerProSection .registerPro-left-title hr {
@@ -407,6 +450,10 @@ img {
 
 #choiceModal .custom-control-label::before {
   background-color: #aaaaaa;
+}
+
+#choiceModal .custom-control-label {
+  cursor: pointer;
 }
 
 #choiceModal button.close {
@@ -550,10 +597,133 @@ img {
   font-size: 0.8rem !important;
 }
 
-.map-frame{
+.sub-menu .dropdown-menu {
+  margin: 0;
+}
+
+.sub-menu .dropdown-menu .dropdown-item{
+  cursor: pointer;
+}
+
+.map-frame {
   box-shadow: 5px 10px 18px #1223;
   width: 80%;
   height: 250px;
   border: 0px;
 }
 /* </baobao> */
+
+.asterisk {
+  color: red;
+  font-size: 0.8em;
+}
+
+.search-icon-bar {
+  cursor: pointer;
+}
+
+/* More Search result Page*/
+.moreSearchResultWrapper {
+  border: 1.5px solid rgba(51, 51, 51, 1);
+  border-radius: 5px;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.moreSearchResultWrapper nav.pagination-nav {
+  margin: 0 auto;
+}
+
+.moreSearchResultWrapper .dropdown-menu li {
+  cursor: pointer;
+}
+
+.moreSearchResultWrapper .dropdown-menu li:hover .dropdown-item {
+  color: #ffffff;
+  background-color: #ff7043;
+}
+
+.moreSearchResultWrapper .dropdown-item:active {
+  background-color: #ff7043;
+}
+
+.moreSearchResultWrapper .page-link {
+  color: #7c410a;
+}
+
+.moreSearchResultWrapper .page-link:hover {
+  color: #970909;
+}
+
+.moreSearchResultWrapper .page-link:focus {
+  box-shadow: none;
+}
+
+.moreSearchResultWrapper .page-item.active .page-link {
+  background-color: #7c410a;
+  border-color: #7c410a;
+}
+
+.moreSearchResultWrapper .article-date {
+  margin: 0 auto;
+  text-align: right !important;
+}
+
+.moreSearchResultWrapper .search-article-thumbnail {
+  width: 60px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.moreSearchResultWrapper .search-article-thumbnail img{
+  width: 100%;
+  height: 100%;
+}
+
+.moreSearchResultWrapper .filter-error-msg {
+  text-align: center;
+  display: none
+}
+
+/* Pagination */
+/* GENERAL STYLES */
+
+.pagination{
+  padding: 30px 0;
+}
+
+.pagination ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination a{
+  display: inline-block;
+  padding: 10px 18px;
+  color: #222;
+}
+
+/* ONE */
+
+.p1 a{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+}
+
+.p1 a:hover{
+  text-decoration: none;
+  background-color: #f3cdaa;
+  border-radius: 100%;
+  color: #ffffff;
+}
+
+.p1 a.is-active{
+  background-color: #d36b0b;
+  border-radius: 100%;
+  color: #ffffff;
+}

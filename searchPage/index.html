@@ -59,7 +59,7 @@
                 <div class="dropdown-divider w-100"></div>
                 <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
                 <div class="dropdown-divider w-100"></div>
-                <a class="dropdown-item pl-0 pr-5" href="../registerproject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <a class="dropdown-item pl-0 pr-5" onclick="return onClickDKDT();"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
                 <div class="dropdown-divider w-100"></div>
               </div>
             </div>
@@ -79,8 +79,24 @@
               </div>
             </div>
           </li>
-          <li class="nav-item active  sub-menu">
-            <a class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          <li id="logInCompo" class="nav-item active sub-menu">
+            <a id="logInBtn" class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          </li>
+          <li id="settingCompo" class="nav-item active sub-menu">
+            <a class="nav-link" href="#" role="button" id="settingDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span id="signedInUser">1712289</span>&nbsp;
+              <span class="signedInIcons">
+                <i class="fas fa-user"></i>&nbsp;
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </span>
+            </a>
+            <div class="dropdown px-1">
+              <div class="dropdown-menu px-0" aria-labelledby="settingDropdownMenu">
+                <a class="dropdown-item pl-0 pr-3" href="#"><i class="far fa-address-card px-3"></i> Hồ sơ</a>
+                <div class="dropdown-divider w-100"></div>
+                <a id="logOutBtn" class="dropdown-item pl-0 pr-3" href="#"><i class="fas fa-sign-out-alt px-3"></i> Đăng xuất</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -204,7 +220,7 @@
       <div class="row">
         <div class="col-md-8 registerPro-left">
           <div class="registerPro-left-wrapper py-3 px-2">
-            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">3 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
+            <h5 class="searchResult px-5 py-2">Tìm thấy <span class="searchResult-number" style="color: red;">33 kết quả</span> liên quan tới từ khóa <span id="key-search-result" class="searchResult-keyword" style="color: red;">"Đăng ký"</span></h5>
             <!-- Department Info -->
             <div class="registerPro-title registerPro-left-title px-5 pt-4 pb-1 text-left">
               <h3>THÔNG TIN KHOA</h3>
@@ -213,43 +229,43 @@
             <div class="registerPro-left-body px-5">
               <ul class="px-0">
                 <!-- Article -->
-                <li class="py-4" style="padding-top: 0 !important;">
+                <li class="py-4">
                   <h6 class="article-title">
                     <a href="#">
-                      Thông báo nộp đơn <span class="searchResult-number" style="color: red; font-style: italic;">
-                        <u>đăng ký</u>
-                      </span> Thực hiện Khóa luận tốt nghiệp/Thực tập tốt nghiệp/Đồ án tốt nghiệp Khóa 2017 - Đợt 2 (Online)
+                      <span class="searchResult-number" style="color: red; font-style: italic;"><u>Đăng ký </u></span>&nbsp;nhận lễ phục và tập trung Lễ tốt nghiệp ngày 29/2/2020
                     </a>
                   </h6>
                   <div class="row">
                     <div class="col-md-2 article-date" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <u>7/12/2020</u>
+                      <u>15/01/2021</u>
                     </div>
                     <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <p>BP Giáo vụ thông báo các bạn sinh viên đã được Giảng viên Doanh nghiệp nhận thực hiện đề tài tốt nghiệp về việc đăng ... Chương trình chính quy.</p>
+                      <p>Thời gian tập trung ngày trao bằng tại Giảng đường 1: 7g30, ngày 29/11/2020 các bạn vui lòng tập trung ở cửa vào Giảng đường 1 để điểm danh. những bạn nào không tập trung đúng giờ để điểm danh sẽ không được xướng tên nhận bằng.</p>
                     </div>
                   </div>
                 </li>
                 <!-- /Article -->
                 <!-- Article -->
-                <li class="py-4">
+                <li class="py-4" style="padding-top: 0 !important;">
                   <h6 class="article-title">
                     <a href="#">
-                      Thông báo <span class="searchResult-number" style="color: red; font-style: italic;"><u>đăng ký </u></span> học phần cho sinh viên bậc Cao đẳng HK1 2020-2021
+                      Thông báo <span class="searchResult-number" style="color: red; font-style: italic;">
+                        <u>đăng ký </u>
+                      </span>&nbsp;cuộc thi "Hành trình Sống đẹp" do PNJ phối hợp cùng Quỹ Thời báo Kinh tế Sài Gòn (STF) tổ chức.
                     </a>
                   </h6>
                   <div class="row">
                     <div class="col-md-2 article-date" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <u>14/12/2020</u>
+                      <u>11/01/2021</u>
                     </div>
                     <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                      <p>Khoa CNTT thông báo đến tất cả các sinh viên bậc cao đẳng hệ chính quy khóa tuyển 2018 trở về trước về việc đăng ký học phần qua mạng...</p>
+                      <p>Không cần những bộ hồ sơ “hoành tráng” hay bảng thành tích với những con số “khủng”, săn học bổng chưa bao giờ dễ đến thế với tổng giá trị giải thưởng lên đến hơn 250 triệu đồng.</p>
                     </div>
                   </div>
                 </li>
                 <!-- /Article -->
               </ul>
-              <h6 class="more text-center"><a href="#">Xem thêm</a></h6>
+              <h6 class="more text-center"><a href="../searchMorePage/index.html">Xem thêm</a></h6>
               
             </div>
           <!-- /Department Info -->
@@ -269,7 +285,7 @@
                 </h6>
                 <div class="row">
                   <div class="col-md-2 article-date" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
-                    <u>3/12/2020</u>
+                    <u>12/01/2021</u>
                   </div>
                   <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
                     <p>Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ScrumViet.</p>
@@ -277,8 +293,25 @@
                 </div>
               </li>
               <!-- /Article -->
+              <!-- Article -->
+              <li>
+                <h6 class="article-title">
+                  <a href="#">
+                    Thông báo <span class="searchResult-number" style="color: red; font-style: italic;"><u>đăng ký</u></span> học bổng ACECOOK HAPPY SCHOLARSHIP
+                  </a>
+                </h6>
+                <div class="row">
+                  <div class="col-md-2 article-date" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
+                    <u>11/01/2021</u>
+                  </div>
+                  <div class="col-md-10 article-content py-2" style="font-size: 0.9rem; color: rgba(0,0,0,0.5)">
+                    <p>Với mong muốn đóng góp một phần nhỏ vào việc phát triển giáo dục ở Việt Nam và đặc biệt cho ngành công nghệ thông tin - Công ty TNHH ACECOOK.</p>
+                  </div>
+                </div>
+              </li>
+              <!-- /Article -->
             </ul>
-            <h6 class="more text-center"><a href="#">Xem thêm</a></h6>
+            <h6 class="more text-center"><a href="../searchMorePageBusiness/index.html">Xem thêm</a></h6>
           </div>
           <!-- /Bussiness Info -->
           </div>
@@ -298,7 +331,7 @@
             </div>
             <div class="registerPro-right-footer">
               <div class="registerPro-right-more text-center">
-                <h8><a href="#">Xem thêm</a></h8>
+                <h8><a href="../categoryPage/index.html">Xem thêm</a></h8>
               </div>
               <div class="fb-page mt-4 mb-3" data-href="https://www.facebook.com/fit.hcmus.hoatdong" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                 <blockquote cite="https://www.facebook.com/fit.hcmus.hoatdong" class="fb-xfbml-parse-ignore">
@@ -320,8 +353,14 @@
           <div class="container-fluid">
             <div class="row py-3">
               <div class="footer-logo col-md-4">
-                <a href="./index.html"><img src="../images/fit-logo.svg" width="50" alt=""></a>
+                <a href="./index.html">
+                  <img src="../images/fit.PNG" width="50" alt="">
+                  <div class="footer-homepage-link px-3">
+                    <span>KHOA CÔNG NGHỆ THÔNG TIN</span> <br/>
+                    <span>ĐH KHOA HỌC TỰ NHIÊN TP.HCM</span>
+                  </div>
               </div>
+
               <div class="col-md-2">
                 <ul class="footer-list">
                   <li><a href="#">Liên hệ</a></li>
@@ -347,7 +386,7 @@
             </div>
             <div class="row copyright text-center">
               <div class="col-md-12">
-                <h6><span class="copyright-C">©</span>opyright 2020</h6>
+                <h6><span class="copyright-C">©</span>copyright 2020</h6>
                 <h6>Thiết kế bởi Khoa CNTT - ĐHKHTN ĐHQG TPHCM</h6>
               </div>
             </div>
@@ -359,7 +398,20 @@
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../javascript/search.js"></script>
-
+	<script>
+		const onClickDKDT = function(){
+			const nv1 = localStorage.getItem("nguyenvong1");
+			const nv2 = localStorage.getItem("nguyenvong2");
+			const user = localStorage.getItem("user");
+			if (user != 1) { 
+				return;
+			}
+			if (nv1 == null || nv1 == "" || nv2 == null || nv2 == "")
+				window.location.href = "../registerproject/index.html";
+			else
+				window.location.href = "../cancelRegisterProject/index.html";
+		}
+	</script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -384,5 +436,6 @@
     <!-- Optional JavaScript -->
     <script src="../javascript/registerproject.js"></script>
     <script src="../javascript/DetailsInfoOfNotify.js"></script>
+    <script src="../javascript/authentication.js"></script>
   </body>
 </html>

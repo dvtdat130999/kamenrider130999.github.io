@@ -59,7 +59,7 @@
                 <div class="dropdown-divider w-100"></div>
                 <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng vàng thành tích</a>
                 <div class="dropdown-divider w-100"></div>
-                <a class="dropdown-item pl-0 pr-5" href="../registerproject/index.html"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
+                <a class="dropdown-item pl-0 pr-5" onclick="return onClickDKDT();"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
                 <div class="dropdown-divider w-100"></div>
               </div>
             </div>
@@ -79,8 +79,24 @@
               </div>
             </div>
           </li>
-          <li class="nav-item active sub-menu">
-            <a class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          <li id="logInCompo" class="nav-item active sub-menu">
+            <a id="logInBtn" class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+          </li>
+          <li id="settingCompo" class="nav-item active sub-menu">
+            <a class="nav-link" href="#" role="button" id="settingDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span id="signedInUser">1712289</span>&nbsp;
+              <span class="signedInIcons">
+                <i class="fas fa-user"></i>&nbsp;
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </span>
+            </a>
+            <div class="dropdown px-1">
+              <div class="dropdown-menu px-0" aria-labelledby="settingDropdownMenu">
+                <a class="dropdown-item pl-0 pr-3" href="#"><i class="far fa-address-card px-3"></i> Hồ sơ</a>
+                <div class="dropdown-divider w-100"></div>
+                <a id="logOutBtn" class="dropdown-item pl-0 pr-3" href="#"><i class="fas fa-sign-out-alt px-3"></i> Đăng xuất</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -241,7 +257,7 @@
                 </li>
                 <!-- /Article -->
               </ul>
-              <h6 class="more text-center"><a href="#">Xem thêm</a></h6>
+              <h6 class="more text-center"><a href="../categoryPage/index.html">Xem thêm</a></h6>
               
             </div>
             <!-- /Updated Info -->
@@ -262,7 +278,7 @@
             </div>
             <div class="registerPro-right-footer">
               <div class="registerPro-right-more text-center">
-                <h8><a href="#">Xem thêm</a></h8>
+                <h8><a href="../categoryPage/index.html">Xem thêm</a></h8>
               </div>
               <div class="fb-page mt-4 mb-3" data-href="https://www.facebook.com/fit.hcmus.hoatdong" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                 <blockquote cite="https://www.facebook.com/fit.hcmus.hoatdong" class="fb-xfbml-parse-ignore">
@@ -284,8 +300,14 @@
           <div class="container-fluid">
             <div class="row py-3">
               <div class="footer-logo col-md-4">
-                <a href="./index.html"><img src="../images/fit-logo.svg" width="50" alt=""></a>
+                <a href="./index.html">
+                  <img src="../images/fit.PNG" width="50" alt="">
+                  <div class="footer-homepage-link px-3">
+                    <span>KHOA CÔNG NGHỆ THÔNG TIN</span> <br/>
+                    <span>ĐH KHOA HỌC TỰ NHIÊN TP.HCM</span>
+                  </div>
               </div>
+
               <div class="col-md-2">
                 <ul class="footer-list">
                   <li><a href="#">Liên hệ</a></li>
@@ -311,7 +333,7 @@
             </div>
             <div class="row copyright text-center">
               <div class="col-md-12">
-                <h6><span class="copyright-C">©</span>opyright 2020</h6>
+                <h6><span class="copyright-C">©</span>copyright 2020</h6>
                 <h6>Thiết kế bởi Khoa CNTT - ĐHKHTN ĐHQG TPHCM</h6>
               </div>
             </div>
@@ -323,7 +345,20 @@
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../javascript/search.js"></script>
-
+	<script>
+		const onClickDKDT = function(){
+			const nv1 = localStorage.getItem("nguyenvong1");
+			const nv2 = localStorage.getItem("nguyenvong2");
+			const user = localStorage.getItem("user");
+			if (user != 1) { 
+				return;
+			}
+			if (nv1 == null || nv1 == "" || nv2 == null || nv2 == "")
+				window.location.href = "../registerproject/index.html";
+			else
+				window.location.href = "../cancelRegisterProject/index.html";
+		}
+	</script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -348,5 +383,6 @@
     <!-- Optional JavaScript -->
     <script src="../javascript/registerproject.js"></script>
     <script src="../javascript/DetailsInfoOfNotify.js"></script>
+    <script src="../javascript/authentication.js"></script>
   </body>
 </html>

@@ -71,7 +71,7 @@
               <a class="dropdown-item pl-0 pr-5" href="#"><i class="fa fa-caret-right px-3" aria-hidden="true"></i> Bảng
                 vàng thành tích</a>
               <div class="dropdown-divider w-100"></div>
-              <a class="dropdown-item pl-0 pr-5" href="../cancelRegisterProject/index.html"><i
+              <a class="dropdown-item pl-0 pr-5" onclick="return onClickDKDT();"><i
                   class="fa fa-caret-right px-3" aria-hidden="true"></i> Đăng ký đề tài tốt nghiệp</a>
               <div class="dropdown-divider w-100"></div>
             </div>
@@ -97,8 +97,24 @@
             </div>
           </div>
         </li>
-        <li class="nav-item active sub-menu">
-          <a class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+        <li id="logInCompo" class="nav-item active sub-menu">
+          <a id="logInBtn" class="nav-link px-4" href="#">ĐĂNG NHẬP</a>
+        </li>
+        <li id="settingCompo" class="nav-item active sub-menu">
+          <a class="nav-link" href="#" role="button" id="settingDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="signedInUser">1712289</span>&nbsp;
+            <span class="signedInIcons">
+              <i class="fas fa-user"></i>&nbsp;
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </span>
+          </a>
+          <div class="dropdown px-1">
+            <div class="dropdown-menu px-0" aria-labelledby="settingDropdownMenu">
+              <a class="dropdown-item pl-0 pr-3" href="#"><i class="far fa-address-card px-3"></i> Hồ sơ</a>
+              <div class="dropdown-divider w-100"></div>
+              <a id="logOutBtn" class="dropdown-item pl-0 pr-3" href="#"><i class="fas fa-sign-out-alt px-3"></i> Đăng xuất</a>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -260,8 +276,8 @@
             <hr />
           </div>
           <div class="registerPro-left-body">
-            <div class="registerPro-date my-3">
-              Ngày Đăng ký: 10/12/2020
+            <div class="registerPro-date my-3" id="regDate">
+              Ngày Đăng ký: 23/01/2020
             </div>
             <table class="table table-bordered">
               <thead class="thead-light">
@@ -306,7 +322,7 @@
           </div>
           <div class="registerPro-right-footer">
             <div class="registerPro-right-more text-center">
-              <h5><a href="#">Xem thêm</a></h5>
+              <h6><a href="../categoryPage/index.html">Xem thêm</a></h6>
             </div>
             <div class="fb-page mt-4 mb-3" data-href="https://www.facebook.com/fit.hcmus.hoatdong" data-tabs="timeline"
               data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
@@ -350,8 +366,14 @@
         <div class="container-fluid">
           <div class="row py-3">
             <div class="footer-logo col-md-4">
-              <a href="./index.html"><img src="../images/fit-logo.svg" width="50" alt=""></a>
+              <a href="./index.html">
+                <img src="../images/fit.PNG" width="50" alt="">
+                <div class="footer-homepage-link px-3">
+                  <span>KHOA CÔNG NGHỆ THÔNG TIN</span> <br/>
+                  <span>ĐH KHOA HỌC TỰ NHIÊN TP.HCM</span>
+                </div>
             </div>
+
             <div class="col-md-2">
               <ul class="footer-list">
                 <li><a href="#">Liên hệ</a></li>
@@ -377,7 +399,7 @@
           </div>
           <div class="row copyright text-center">
             <div class="col-md-12">
-              <h6><span class="copyright-C">©</span>opyright 2020</h6>
+              <h6><span class="copyright-C">©</span>copyright 2020</h6>
               <h6>Thiết kế bởi Khoa CNTT - ĐHKHTN ĐHQG TPHCM</h6>
             </div>
           </div>
@@ -393,10 +415,10 @@
       const nv1 = localStorage.getItem("nguyenvong1");
       const nv2 = localStorage.getItem("nguyenvong2");
       if (nv1 || nv2) {
-        let name1 = nv1.substring(0, nv1.indexOf('-')).trim();
-        let name2 = nv2.substring(0, nv2.indexOf('-')).trim();
-        let type1 = nv1.substring(nv1.indexOf('-') + 1).trim();
-        let type2 = nv2.substring(nv2.indexOf('-') + 1).trim();
+        let name1 = nv1.substring(0, nv1.lastIndexOf('-')).trim();
+        let name2 = nv2.substring(0, nv2.lastIndexOf('-')).trim();
+        let type1 = nv1.substring(nv1.lastIndexOf('-') + 1).trim();
+        let type2 = nv2.substring(nv2.lastIndexOf('-') + 1).trim();
         document.getElementById("nameChoice1").innerHTML = name1;
         document.getElementById("nameChoice2").innerHTML = name2;
         document.getElementById("typeChoice1").innerHTML = type1;
@@ -408,6 +430,14 @@
         document.getElementById("typeChoice1").innerHTML = 'ĐATN';
         document.getElementById("typeChoice2").innerHTML = 'ĐATN';
       }
+	  
+		let today = new Date();
+		let dd = String(today.getDate()).padStart(2, '0');
+		let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+		let yyyy = today.getFullYear();
+
+		today = dd + '/' + mm + '/' + yyyy;
+		document.getElementById("regDate").innerText = "Ngày đăng ký: " + today;
     }
     const onClose = () => {
       console.log('aas')
@@ -417,6 +447,20 @@
     }
     document.getElementsByTagName("body").addEventListener("load", onLoadData());
   </script>
+  	<script>
+		const onClickDKDT = function(){
+			const nv1 = localStorage.getItem("nguyenvong1");
+			const nv2 = localStorage.getItem("nguyenvong2");
+			const user = localStorage.getItem("user");
+			if (user != 1) { 
+				return;
+			}
+			if (nv1 == null || nv1 == "" || nv2 == null || nv2 == "")
+				window.location.href = "../registerproject/index.html";
+			else
+				window.location.href = "../cancelRegisterProject/index.html";
+		}
+	</script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="../javascript/search.js"></script>
 
@@ -439,6 +483,7 @@
 
   <!-- Optional JavaScript -->
   <script src="../javascript/cancelRegisterProject.js"></script>
+  <script src="../javascript/authentication.js"></script>
 </body>
 
 </html>
